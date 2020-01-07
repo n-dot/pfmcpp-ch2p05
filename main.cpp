@@ -113,7 +113,7 @@ struct Hand
 
   struct Finger
   {
-    float FingerLength=4.5f;
+    float FingerLength = 4.5f;
   };
 
   Finger index;
@@ -137,7 +137,7 @@ struct Face
 
   struct Nose
   {
-    double nosesize =0.4;
+    double nosesize = 0.4;
     int numberOfNostrils = 2;
   };
 
@@ -180,13 +180,13 @@ struct BoxOfTeeth
  */
 struct DonaldTrump
 {
-  int numberOfBrains=0;
-  bool isGood=0;
-  bool isTrash=1;
+  int numberOfBrains = 0;
+  bool isGood = 0;
+  bool isTrash = 1;
 
   struct Demon
   {
-    bool isGoodDemon=0;
+    bool isGoodDemon = 0;
   };
 
   Demon greed;
@@ -205,16 +205,16 @@ struct DonaldTrump
  */
 struct CowBoy
 {
-  int numberOfHats=1;
+  int numberOfHats = 1;
 
   struct Partner
   {
-    bool isHorse=0;
+    bool isHorse = 0;
   };
 
   struct Horse
   {
-    bool isHorse=1;
+    bool isHorse = 1;
   };
 
   Partner jimbo;
@@ -231,12 +231,12 @@ struct CowBoy
  */
 struct PencilSharpener
 {
-  double bladeSharpness=9.999;
+  double bladeSharpness = 9.999;
 
   struct Pencil
   {
-    double sharpness=0.1212;
-    bool isMechanical=0;
+    double sharpness = 0.1212;
+    bool isMechanical = 0;
   };
 
   void sharpen(Pencil thepencil);
@@ -250,12 +250,12 @@ struct Lobster
 {
   struct Pincher
   {
-    double strength=999999.99;
+    double strength = 999999.99;
   };
 
   struct Antenna
   {
-    float pointiness=5.3f;
+    float pointiness = 5.3f;
   };
 
   Pincher leftPincher;
