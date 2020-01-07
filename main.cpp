@@ -49,7 +49,6 @@ struct CarWash            //1) a U.D.T. with a random number of member variables
  */
 struct Refrigerator
 {
-
   struct FoodItem
   {
     bool tastesGood = 0;
@@ -57,7 +56,6 @@ struct Refrigerator
   };
 
   void consumeFoodItem(FoodItem thefood);
-
   void discardFoodItem(FoodItem thefood);
 
   FoodItem potato;
@@ -78,22 +76,8 @@ struct BagOfBagsOfBools
   BagOfBools secondBag;
   BagOfBools thirdBag;
 
-  bool considerThisBag(BagOfBools thisBag)
-  FIXME you shouldn't have implementations added yet.
-  {
-    (void)thisBag; 
-    return {};
-  }
-
-  double howGoodAreTheseTwoBags(BagOfBools thisBag,BagOfBools thatBag)
-  FIXME you shouldn't have implementations added yet.
-  {
-    (void)thisBag; 
-    (void)thatBag; 
-    return {};
-  }
-FIXME remove extra blank lines
-FIXME
+  void considerThisBag(BagOfBools thisBag);
+  void howGoodAreTheseTwoBags(BagOfBools thisBag,BagOfBools thatBag);
 };
 
 
@@ -104,6 +88,7 @@ FIXME
 struct GiraffeTickler
 {
   int numberOfFeathers = 5;
+
   struct Giraffe
   {
     double howtall = 100.5;
@@ -115,7 +100,6 @@ struct GiraffeTickler
   Giraffe Tony;
   Giraffe Frank;
   Giraffe Esmerelda;
-FIXME remove extra blank lines
 };
 
 /*
@@ -139,7 +123,6 @@ struct Hand
   Finger thumb;
 
   void snap(Finger pushingOne, Finger staticOne, double snapForce);
-FIXME remove extra blank lines
 };
 
 /*
@@ -150,12 +133,14 @@ struct Face
   struct Eye
   {
     float eyesize = 0.3f;
-  };FIXME add a line between UDTs for readability
+  };
+
   struct Nose
   {
     double nosesize =0.4;
     int numberOfNostrils = 2;
-  };FIXME add a line between UDTs for readability
+  };
+
   struct Mouth
   {
     double mouthWidth = 2.1;
@@ -179,15 +164,13 @@ struct Face
 struct BoxOfTeeth
 {
   int numberOfTeeth;
-  struct Tooth FIXME add a line between UDTs and variables for readability
+
+  struct Tooth
   {
     double toothSize = 0.1;
   };
 
-  Tooth jimsTooth; FIXME you can declare these all on the same line, with commas separating them. 
-  Tooth fredsTooth;
-  Tooth janicesTooth;
-  Tooth jeffsTooth;
+  Tooth jimsTooth, fredsTooth, janicesTooth, jeffsTooth;
 
   void ExamineTooth(Tooth thisTooth);
 };
@@ -195,22 +178,25 @@ struct BoxOfTeeth
 /*
  7)
  */
-struct donaldTrump FIXME types should begin with a capital letter
+struct DonaldTrump
 {
   int numberOfBrains=0;
   bool isGood=0;
-  bool isTrash=1;FIXME add a line between UDTs for readability
-  struct demon FIXME types should begin with a capital letter
+  bool isTrash=1;
+
+  struct Demon
   {
     bool isGoodDemon=0;
   };
-  demon greed;
-  demon trash;
-  demon hate;
-  demon evil;
-  demon envy;
-  demon theVoid;FIXME add a line between variables and functions for readability
-  void doAnything(demon motivatingFactor);
+
+  Demon greed;
+  Demon trash;
+  Demon hate;
+  Demon evil;
+  Demon envy;
+  Demon theVoid;
+
+  void doAnything(Demon motivatingFactor);
 };
  
 
@@ -219,15 +205,18 @@ struct donaldTrump FIXME types should begin with a capital letter
  */
 struct CowBoy
 {
-  int numberOfHats=1;FIXME add a line between UDTs for readability
+  int numberOfHats=1;
+
   struct Partner
   {
     bool isHorse=0;
-  };FIXME add a line between UDTs for readability
+  };
+
   struct Horse
   {
     bool isHorse=1;
-  };FIXME add a line between UDTs for readability
+  };
+
   Partner jimbo;
   Partner steve;
   Partner dolores;
@@ -242,7 +231,8 @@ struct CowBoy
  */
 struct PencilSharpener
 {
-  double bladeSharpness=9.999;FIXME add a line between UDTs for readability
+  double bladeSharpness=9.999;
+
   struct Pencil
   {
     double sharpness=0.1212;
@@ -261,15 +251,18 @@ struct Lobster
   struct Pincher
   {
     double strength=999999.99;
-  };FIXME add a line between UDTs for readability
+  };
+
   struct Antenna
   {
     float pointiness=5.3f;
-  };FIXME add a line between UDTs for readability
+  };
+
   Pincher leftPincher;
   Pincher rightPincher;
   Antenna leftAntenna;
-  Antenna rightAntenna;FIXME add a line between UDTs for readability
+  Antenna rightAntenna;
+
   void doPinch(Pincher thatWhichPinches);
 };
 
