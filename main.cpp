@@ -47,42 +47,229 @@ struct CarWash            //1) a U.D.T. with a random number of member variables
 /*
  1)
  */
+struct Refrigerator
+{
 
+  struct FoodItem
+  {
+    bool tastesGood = 0;
+    double caloricContent = 100.01;
+  };
+
+  void consumeFoodItem(FoodItem thefood);
+
+  void discardFoodItem(FoodItem thefood);
+
+  FoodItem potato;
+};
 /*
  2)
  */
+struct BagOfBagsOfBools
+{
+  struct BagOfBools
+  {
+    bool oneTruth = 0;
+    bool anotherTruth = 1;
+    bool aFalsehood = 1;
+  };
+
+  BagOfBools firstBag;
+  BagOfBools secondBag;
+  BagOfBools thirdBag;
+
+  bool considerThisBag(BagOfBools thisBag)
+  {
+    (void)thisBag;
+    return {};
+  }
+
+  double howGoodAreTheseTwoBags(BagOfBools thisBag,BagOfBools thatBag)
+  {
+    (void)thisBag; //in a real program, we could use
+    (void)thatBag; //voided them to get rid of warnings
+    return {};
+  }
+
+
+};
+
 
 /*
  3)
  */
 
+struct GiraffeTickler
+{
+  int numberOfFeathers = 5;
+  struct Giraffe
+  {
+    double howtall = 100.5;
+    int numberOfSpots = 500;
+  };
+
+  void tickleGiraffe(Giraffe targetGiraffe);
+
+  Giraffe Tony;
+  Giraffe Frank;
+  Giraffe Esmerelda;
+
+};
+
 /*
  4)
  */
 
+struct Hand
+{
+  int numberFingers = 5;
+  bool isHandReal = 0;
+
+  struct Finger
+  {
+    float FingerLength=4.5f;
+  };
+
+  Finger index;
+  Finger middle;
+  Finger ring;
+  Finger pinky;
+  Finger thumb;
+
+  void snap(Finger pushingOne, Finger staticOne, double snapForce);
+
+};
+
 /*
  5)
  */
+struct Face
+{
+  struct Eye
+  {
+    float eyesize = 0.3f;
+  };
+  struct Nose
+  {
+    double nosesize =0.4;
+    int numberOfNostrils = 2;
+  };
+  struct Mouth
+  {
+    double mouthWidth = 2.1;
+    double mouthHeight = 0.2;
+  };
+
+  Mouth theMouth;
+  Eye leftEye;
+  Eye rightEye;
+  Nose theNose;
+
+  void smile(Mouth theMouthThatSmiles);
+  void wink(Eye leftEye, Eye rightEye);
+  void blink(Eye leftEye, Eye rightEye);
+};
 
 /*
  6)
  */
 
+struct BoxOfTeeth
+{
+  int numberOfTeeth;
+  struct Tooth
+  {
+    double toothSize = 0.1;
+  };
+
+  Tooth jimsTooth;
+  Tooth fredsTooth;
+  Tooth janicesTooth;
+  Tooth jeffsTooth;
+
+  void ExamineTooth(Tooth thisTooth);
+};
+
 /*
  7)
  */
+struct donaldTrump
+{
+  int numberOfBrains=0;
+  bool isGood=0;
+  bool isTrash=1;
+  struct demon
+  {
+    bool isGoodDemon=0;
+  };
+  demon greed;
+  demon trash;
+  demon hate;
+  demon evil;
+  demon envy;
+  demon theVoid;
+  void doAnything(demon motivatingFactor);
+};
+ 
 
 /*
  8)
  */
+struct CowBoy
+{
+  int numberOfHats=1;
+  struct Partner
+  {
+    bool isHorse=0;
+  };
+  struct Horse
+  {
+    bool isHorse=1;
+  };
+  Partner jimbo;
+  Partner steve;
+  Partner dolores;
+  Horse mike;
+
+  void sayHowdy(Partner toThisPartner);
+  void sayYeeHaw(Horse onThisHorse);
+};
 
 /*
  9)
  */
+struct PencilSharpener
+{
+  double bladeSharpness=9.999;
+  struct Pencil
+  {
+    double sharpness=0.1212;
+    bool isMechanical=0;
+  };
 
+  void sharpen(Pencil thepencil);
+
+  Pencil ticonderoga;
+};
 /*
  10)
  */
+struct Lobster
+{
+  struct Pincher
+  {
+    double strength=999999.99;
+  };
+  struct Antenna
+  {
+    float pointiness=5.3f;
+  };
+  Pincher leftPincher;
+  Pincher rightPincher;
+  Antenna leftAntenna;
+  Antenna rightAntenna;
+  void doPinch(Pincher thatWhichPinches);
+};
 
 #include <iostream>
 int main()
